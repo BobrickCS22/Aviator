@@ -1,0 +1,299 @@
+.game-holder {
+position: absolute;
+width: 100%;
+height: 100%;
+background: -webkit-linear-gradient(#e4e0ba, #f7d9aa);
+background: linear-gradient(#e4e0ba, #f7d9aa);
+}
+
+.world{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* background: linear-gradient(#e4e0ba, #f7d9aa); */
+}
+
+.header {
+    position: absolute;
+    top: 8vh;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    pointer-events: none;
+}
+
+.header h1 {
+    font-family: 'Playfair Display';
+    font-size: 4.5em;
+    line-height: 1;
+    margin: 0;
+    letter-spacing: -0.025em;
+    color: #d1b790;
+}
+
+.header h1 span {
+    font-size: 0.2em;
+    font-style: italic;
+    display: block;
+    margin: 0 0 -1.5em -7em;
+    letter-spacing: 0px;
+}
+
+.header h2 {
+font-size: 1em;
+margin: 0.25em 0;
+letter-spacing: 1em;
+color: red;
+text-transform: uppercase;
+white-space: nowrap;
+text-indent: 1em;
+}
+.score {
+    width:100%;
+    margin: 2em 0 0;
+    text-align: center;
+    white-space: nowrap;
+}
+
+.score_content {
+    position:relative;
+    display:inline-block;
+    padding: 0 1em;
+    vertical-align: top;
+}
+
+.score_label {
+    font-size: 12px;
+    position:relative;
+    margin: 0 0 0.5em 0;
+    text-align: center;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: #b1956a;
+}
+
+.score_content:nth-child(2) {
+border-right: 2px solid #b1956a;
+border-left: 2px solid #b1956a;
+}
+.score_value {
+    font-family: "Playfair Display";
+    font-weight: bold;
+    color: #b1956a;
+}
+
+.score_value--level {
+    font-size: 26px;
+}
+
+.score_value--dist {
+    font-size: 30px;
+}
+
+.level-circle {
+    position: absolute;
+    left: 50%;
+    width:46px;
+    margin: -37px 0 0 -23px;
+    -webkit-transform: rotate(-90deg);
+    transform: rotate(-90deg);
+}
+
+.score_value--energy {
+    position: relative;
+    width: 60px;
+    height: 8px;
+    margin-top: 20px;
+    border-radius: 3px;
+    background-color: #b1956a;
+}
+
+.energy-bar{
+position: absolute;
+top: 0;
+right: 0;
+bottom: 0;
+left: 0;
+margin: 2px;
+background-color:  red;
+animation-name: none;
+-webkit-animation-name: none;
+animation-duration: 150ms;
+-webkit-animation-duration: 150ms;
+animation-iteration-count: infinite;
+-webkit-animation-iteration-count: infinite;
+}
+
+.message {
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    pointer-events: none;
+
+}
+.message--replay {
+    font-size: 1.25vw;
+    bottom: 40vh;
+    display: none;
+    letter-spacing: 0.5em;
+    text-indent: 0.5em;
+    color: #b97b1e;
+}
+.message--instructions{
+    font-family: "Playfair Display";
+    font-size: 0.95em;
+    bottom: 8vh;
+    letter-spacing: 0.2em;
+    color: deepskyblue;
+}
+.message--instructions span{
+    display: block;
+    color: red;
+    white-space: nowrap;
+}
+
+.meta {
+    font-size: 1em;
+    line-height: 1;
+    position: absolute;
+    top: 1em;
+    left: 1em;
+    display: flex;
+    flex-wrap: wrap;
+    white-space: nowrap;
+    border-top: 1px solid #b97b1e;
+
+
+}
+.demo-link {
+    font-family: 'Playfair Display';
+    font-weight: bold;
+    text-align: center;
+    letter-spacing: 0.2;
+    text-transform: uppercase;
+    color: #b97b1e;
+    font-size: 1em;
+    -webkit-transition:all 0.5s ease;
+            transition:all 0.5s ease;
+}
+
+.demo-link:hover{color: black;}
+
+.meta a{
+    display: block;
+    border: 1px solid #b1956a;
+    padding: 1em 1.4em;
+    border-top: 0;
+
+}
+
+.recl {
+    width: 2em;
+    text-decoration: none;
+}
+.recl:after{
+    transform: rotate(-90deg) translateX(-1em) translateY(-1em);
+    opacity: 0;
+    content:'⮫';
+    font-family: 'fontAwesome';
+    font-size: 28px;
+    display: inline-block;
+    margin-left: 8px;
+}
+.recl:hover {color: blue;}
+.recl:hover:after {
+    transition: opacity .25s, transform .5s;
+    transform: rotate(0) translateX(0) translateY(0);
+    opacity: 10;
+}
+
+@keyframes blinking {
+    0% {opacity: 0; }
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+@-webkit-keyframes blinking {
+    0% {opacity: 0;}
+    50% {opacity: 1;}
+    100% {opacity: 0;}
+}
+
+.overlay{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* background-color: #f7d9aa; */
+background-image: url(https://github.com/sergsem72/avia5/blob/main/start1.png);
+background-size: 100% 130%;
+background-position: center center;
+background-repeat: no-repeat;
+height: 100%;
+    z-index: 1000;
+}
+
+.custom{
+width: 230px;
+height: 130px;
+color:blue; 
+border-radius: 10px;
+padding: 10px 25px;
+font-family: Georgia, 'Times New Roman', Times, serif;
+cursor: pointer;
+background: transparent;
+position: relative;
+display: inline-block;
+outline: none;
+border: none;
+font-size: 200%;
+}
+
+.start-game{
+border: none;
+transition: all 0.3s ease;
+overflow: hidden;
+}
+
+/* .start-game:after { 
+    position: absolute; 
+    content: " "; 
+    z-index: -1; 
+    top: 0; 
+    left: 0; 
+    width: 100%; 
+    height: 100%; 
+     background-color: #1fd1f9; 
+  background-image: linear-gradient(315deg, #1fd1f9 0%, #b621fe 74%); 
+  background-image: url("./start1.png");
+    transition: all 0.3s ease; 
+  }  */
+  .start-game:hover { 
+    background: transparent; 
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5), 
+                -4px -4px 6px 0 rgba(116, 125, 136, .2),  
+      inset -4px -4px 6px 0 rgba(255,255,255,.5), 
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3); 
+    color: #fff; 
+  } 
+  .start-game:hover:after { 
+    -webkit-transform: scale(2) rotate(180deg); 
+    transform: scale(2) rotate(180deg); 
+    box-shadow:  4px 4px 6px 0 rgba(255,255,255,.5), 
+                -4px -4px 6px 0 rgba(116, 125, 136, .2),  
+      inset -4px -4px 6px 0 rgba(255,255,255,.5), 
+      inset 4px 4px 6px 0 rgba(116, 125, 136, .3); 
+  } 
+
+
+.hidden{
+    display: none;
+}
