@@ -25,7 +25,7 @@ var blue_break = new Audio();
 var samolet_fall = new Audio();
 fly.src = "https://github.com/BobrickCS22/Aviator/blob/main/fly.mp3";
 fly.loop = true;
-red_break.src = "https://github.com/BobrickCS22/Aviator/blob/red_break2.mp3";
+red_break.src = "https://github.com/BobrickCS22/Aviator/blob/main/red_break.mp3";
 blue_break.src = "https://github.com/BobrickCS22/Aviator/blob/main/blue_break.mp3";
 samolet_fall.src = "https://github.com/BobrickCS22/Aviator/blob/main/samolet.mp3";
 
